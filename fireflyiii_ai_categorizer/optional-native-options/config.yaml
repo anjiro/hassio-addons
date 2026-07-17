@@ -1,0 +1,48 @@
+# Drop-in replacement for ../config.yaml if you'd rather set credentials from
+# the Supervisor's add-on Configuration tab instead of the app's own Settings
+# UI. Requires the Dockerfile + run.sh in this folder (local build, needs
+# bashio) instead of pointing directly at the upstream image.
+
+name: "Firefly III AI Categorizer"
+version: "1.0.0"
+slug: "fireflyiii_ai_categorizer"
+description: "AI-based transaction categorization for Firefly III"
+url: "https://github.com/ejagombar/FireflyIII-AI-Categorizer"
+arch:
+  - aarch64
+  - amd64
+startup: application
+boot: auto
+init: false
+
+ports:
+  3000/tcp: 3000
+ports_description:
+  3000/tcp: "Web UI"
+
+map:
+  - addon_config:rw
+
+options:
+  firefly_url: ""
+  firefly_token: ""
+  ai_provider: "openai"
+  openai_api_key: ""
+  openai_model: "gpt-4o-mini"
+  openai_base_url: ""
+  gemini_api_key: ""
+  gemini_model: "gemini-2.5-flash"
+  deepseek_api_key: ""
+  deepseek_model: "deepseek-chat"
+
+schema:
+  firefly_url: str
+  firefly_token: password
+  ai_provider: "list(openai|gemini|deepseek)"
+  openai_api_key: password
+  openai_model: str
+  openai_base_url: str?
+  gemini_api_key: password?
+  gemini_model: str?
+  deepseek_api_key: password?
+  deepseek_model: str?

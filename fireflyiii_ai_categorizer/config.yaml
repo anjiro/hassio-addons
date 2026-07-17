@@ -1,0 +1,29 @@
+name: "Firefly III AI Categorizer"
+version: "1.0.0"
+slug: "fireflyiii_ai_categorizer"
+description: "AI-based transaction categorization for Firefly III (OpenAI, Gemini, DeepSeek, or local Ollama)"
+url: "https://github.com/ejagombar/FireflyIII-AI-Categorizer"
+arch:
+  - aarch64
+  - amd64
+startup: application
+boot: auto
+init: false
+
+image: "ghcr.io/ejagombar/fireflyiii-ai-categorizer"
+
+ports:
+  3000/tcp: 3000
+ports_description:
+  3000/tcp: "Web UI — configure Firefly III connection and AI provider here after first start"
+
+# Persists /data (the app's own config.json, containing your Firefly token and
+# AI provider keys) across addon restarts/updates.
+map:
+  - addon_config:rw
+
+# No HA-native options needed — all configuration (Firefly URL/token, AI
+# provider, API keys) is done through the app's own Settings page at
+# http://<ha-host>:3000 and persisted to /data/config.json by the app itself.
+options: {}
+schema: {}

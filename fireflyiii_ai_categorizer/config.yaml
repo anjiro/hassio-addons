@@ -16,6 +16,8 @@ ports:
   3000/tcp: 3000
 ports_description:
   3000/tcp: "Web UI — configure Firefly III connection and AI provider here after first start"
+webui: http://[HOST]:[PORT:3000]
+watchdog: http://[HOST]:[PORT:3000]/health
 
 # Persists /data (the app's own config.json, containing your Firefly token and
 # AI provider keys) across addon restarts/updates.

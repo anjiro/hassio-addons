@@ -1,5 +1,5 @@
 name: "Firefly III AI Categorizer"
-version: "1.0.0"
+version: "1.0.1"
 slug: "fireflyiii_ai_categorizer"
 description: "AI-based transaction categorization for Firefly III (OpenAI, Gemini, DeepSeek, or local Ollama)"
 url: "https://github.com/ejagombar/FireflyIII-AI-Categorizer"

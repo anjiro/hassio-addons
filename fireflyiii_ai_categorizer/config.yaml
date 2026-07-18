@@ -1,5 +1,5 @@
 name: "Firefly III AI Categorizer"
-version: "1.0.2"
+version: "1.0.3"
 slug: "fireflyiii_ai_categorizer"
 description: "AI-based transaction categorization for Firefly III (OpenAI, Gemini, DeepSeek, or local Ollama)"
 url: "https://github.com/ejagombar/FireflyIII-AI-Categorizer"
@@ -10,12 +10,11 @@ startup: application
 boot: auto
 init: false
 
-image: "ghcr.io/ejagombar/fireflyiii-ai-categorizer"
-
 ports:
   3000/tcp: 3000
 ports_description:
   3000/tcp: "Web UI — configure Firefly III connection and AI provider here after first start"
+
 webui: http://[HOST]:[PORT:3000]
 watchdog: http://[HOST]:[PORT:3000]/health
 
@@ -29,3 +28,4 @@ map:
 # http://<ha-host>:3000 and persisted to /data/config.json by the app itself.
 options: {}
 schema: {}
+

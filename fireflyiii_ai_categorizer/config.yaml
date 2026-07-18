@@ -1,5 +1,5 @@
 name: "Firefly III AI Categorizer"
-version: "1.0.1"
+version: "1.0.2"
 slug: "fireflyiii_ai_categorizer"
 description: "AI-based transaction categorization for Firefly III (OpenAI, Gemini, DeepSeek, or local Ollama)"
 url: "https://github.com/ejagombar/FireflyIII-AI-Categorizer"
@@ -22,7 +22,7 @@ watchdog: http://[HOST]:[PORT:3000]/health
 # Persists /data (the app's own config.json, containing your Firefly token and
 # AI provider keys) across addon restarts/updates.
 map:
-  - addon_config:rw
+  - app_config:rw
 
 # No HA-native options needed — all configuration (Firefly URL/token, AI
 # provider, API keys) is done through the app's own Settings page at

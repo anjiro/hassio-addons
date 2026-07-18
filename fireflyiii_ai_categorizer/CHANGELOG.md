@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2
+
+* Use `app_config` instead of `addon_config` in `config.yaml`
+
 ## 1.0.1
 
 *  Beep beep

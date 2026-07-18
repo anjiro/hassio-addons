@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1
+
+*  Beep beep
+
 ## 1.0.0
 
 - Initial release. Wraps `ghcr.io/ejagombar/fireflyiii-ai-categorizer:latest`
